@@ -1,8 +1,11 @@
-//
-//  LoginIntent.swift
-//  AWI-Mobile
-//
-//  Created by Thomas Coulon on 18/03/2024.
-//
+import SwiftUI
 
 import Foundation
+
+enum LoginIntent {
+    case login(email: String, password: String)
+    case register(pseudo: String, email: String, password: String, passwordConfirmation: String)
+    case emailChanged(String)
+    case passwordChanged(String)
+    case toggleRegistration
+}

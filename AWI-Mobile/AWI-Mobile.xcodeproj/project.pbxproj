@@ -14,6 +14,24 @@
 		D2AA364D2BA83717005BD859 /* AWI_MobileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AA364C2BA83717005BD859 /* AWI_MobileTests.swift */; };
 		D2AA36572BA83717005BD859 /* AWI_MobileUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AA36562BA83717005BD859 /* AWI_MobileUITests.swift */; };
 		D2AA36592BA83717005BD859 /* AWI_MobileUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AA36582BA83717005BD859 /* AWI_MobileUITestsLaunchTests.swift */; };
+		D2AA36692BA8379F005BD859 /* LoginIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AA36682BA8379F005BD859 /* LoginIntent.swift */; };
+		D2AA366B2BA837B5005BD859 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AA366A2BA837B5005BD859 /* LoginModel.swift */; };
+		D2AA366D2BA837C6005BD859 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AA366C2BA837C6005BD859 /* LoginView.swift */; };
+		D2AA366F2BA837D5005BD859 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AA366E2BA837D5005BD859 /* LoginViewModel.swift */; };
+		D2AA36742BA83811005BD859 /* ProfileIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AA36732BA83811005BD859 /* ProfileIntent.swift */; };
+		D2AA36762BA83828005BD859 /* ProfileState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AA36752BA83828005BD859 /* ProfileState.swift */; };
+		D2AA36782BA8383A005BD859 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AA36772BA8383A005BD859 /* ProfileView.swift */; };
+		D2AA367A2BA8384C005BD859 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AA36792BA8384C005BD859 /* ProfileViewModel.swift */; };
+		D2AA367C2BA83860005BD859 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AA367B2BA83860005BD859 /* UserData.swift */; };
+		D2AA367E2BA83872005BD859 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AA367D2BA83872005BD859 /* UserManager.swift */; };
+		D2AA36812BA838D7005BD859 /* InscriptionIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AA36802BA838D7005BD859 /* InscriptionIntent.swift */; };
+		D2AA36832BA838E6005BD859 /* InscriptionState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AA36822BA838E6005BD859 /* InscriptionState.swift */; };
+		D2AA36852BA838FC005BD859 /* InscriptionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AA36842BA838FC005BD859 /* InscriptionViewModel.swift */; };
+		D2AA36872BA8391E005BD859 /* InscriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AA36862BA8391E005BD859 /* InscriptionView.swift */; };
+		D2AA368A2BA8395A005BD859 /* PlanningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AA36892BA8395A005BD859 /* PlanningView.swift */; };
+		D2AA368C2BA83970005BD859 /* PlanningIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AA368B2BA83970005BD859 /* PlanningIntent.swift */; };
+		D2AA368E2BA83984005BD859 /* PlanningState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AA368D2BA83984005BD859 /* PlanningState.swift */; };
+		D2AA36902BA8399A005BD859 /* PlanningViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AA368F2BA8399A005BD859 /* PlanningViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +63,24 @@
 		D2AA36522BA83717005BD859 /* AWI-MobileUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AWI-MobileUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2AA36562BA83717005BD859 /* AWI_MobileUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AWI_MobileUITests.swift; sourceTree = "<group>"; };
 		D2AA36582BA83717005BD859 /* AWI_MobileUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AWI_MobileUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D2AA36682BA8379F005BD859 /* LoginIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginIntent.swift; sourceTree = "<group>"; };
+		D2AA366A2BA837B5005BD859 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		D2AA366C2BA837C6005BD859 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		D2AA366E2BA837D5005BD859 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		D2AA36732BA83811005BD859 /* ProfileIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileIntent.swift; sourceTree = "<group>"; };
+		D2AA36752BA83828005BD859 /* ProfileState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileState.swift; sourceTree = "<group>"; };
+		D2AA36772BA8383A005BD859 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		D2AA36792BA8384C005BD859 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		D2AA367B2BA83860005BD859 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		D2AA367D2BA83872005BD859 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
+		D2AA36802BA838D7005BD859 /* InscriptionIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InscriptionIntent.swift; sourceTree = "<group>"; };
+		D2AA36822BA838E6005BD859 /* InscriptionState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InscriptionState.swift; sourceTree = "<group>"; };
+		D2AA36842BA838FC005BD859 /* InscriptionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InscriptionViewModel.swift; sourceTree = "<group>"; };
+		D2AA36862BA8391E005BD859 /* InscriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InscriptionView.swift; sourceTree = "<group>"; };
+		D2AA36892BA8395A005BD859 /* PlanningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanningView.swift; sourceTree = "<group>"; };
+		D2AA368B2BA83970005BD859 /* PlanningIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanningIntent.swift; sourceTree = "<group>"; };
+		D2AA368D2BA83984005BD859 /* PlanningState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanningState.swift; sourceTree = "<group>"; };
+		D2AA368F2BA8399A005BD859 /* PlanningViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanningViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,11 +131,17 @@
 		D2AA36392BA83714005BD859 /* AWI-Mobile */ = {
 			isa = PBXGroup;
 			children = (
+				D2AA36882BA83944005BD859 /* Planning */,
+				D2AA367F2BA8387B005BD859 /* Inscription */,
+				D2AA36702BA837E4005BD859 /* Profile */,
+				D2AA36672BA83760005BD859 /* Login */,
 				D2AA363A2BA83714005BD859 /* AWI_MobileApp.swift */,
 				D2AA363C2BA83714005BD859 /* ContentView.swift */,
 				D2AA363E2BA83716005BD859 /* Assets.xcassets */,
 				D2AA36402BA83716005BD859 /* AWI_Mobile.entitlements */,
 				D2AA36412BA83716005BD859 /* Preview Content */,
+				D2AA367B2BA83860005BD859 /* UserData.swift */,
+				D2AA367D2BA83872005BD859 /* UserManager.swift */,
 			);
 			path = "AWI-Mobile";
 			sourceTree = "<group>";
@@ -127,6 +169,50 @@
 				D2AA36582BA83717005BD859 /* AWI_MobileUITestsLaunchTests.swift */,
 			);
 			path = "AWI-MobileUITests";
+			sourceTree = "<group>";
+		};
+		D2AA36672BA83760005BD859 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				D2AA36682BA8379F005BD859 /* LoginIntent.swift */,
+				D2AA366A2BA837B5005BD859 /* LoginModel.swift */,
+				D2AA366C2BA837C6005BD859 /* LoginView.swift */,
+				D2AA366E2BA837D5005BD859 /* LoginViewModel.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		D2AA36702BA837E4005BD859 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				D2AA36732BA83811005BD859 /* ProfileIntent.swift */,
+				D2AA36752BA83828005BD859 /* ProfileState.swift */,
+				D2AA36772BA8383A005BD859 /* ProfileView.swift */,
+				D2AA36792BA8384C005BD859 /* ProfileViewModel.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		D2AA367F2BA8387B005BD859 /* Inscription */ = {
+			isa = PBXGroup;
+			children = (
+				D2AA36802BA838D7005BD859 /* InscriptionIntent.swift */,
+				D2AA36822BA838E6005BD859 /* InscriptionState.swift */,
+				D2AA36842BA838FC005BD859 /* InscriptionViewModel.swift */,
+				D2AA36862BA8391E005BD859 /* InscriptionView.swift */,
+			);
+			path = Inscription;
+			sourceTree = "<group>";
+		};
+		D2AA36882BA83944005BD859 /* Planning */ = {
+			isa = PBXGroup;
+			children = (
+				D2AA36892BA8395A005BD859 /* PlanningView.swift */,
+				D2AA368B2BA83970005BD859 /* PlanningIntent.swift */,
+				D2AA368D2BA83984005BD859 /* PlanningState.swift */,
+				D2AA368F2BA8399A005BD859 /* PlanningViewModel.swift */,
+			);
+			path = Planning;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,8 +345,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2AA36742BA83811005BD859 /* ProfileIntent.swift in Sources */,
+				D2AA36902BA8399A005BD859 /* PlanningViewModel.swift in Sources */,
+				D2AA36782BA8383A005BD859 /* ProfileView.swift in Sources */,
+				D2AA36832BA838E6005BD859 /* InscriptionState.swift in Sources */,
 				D2AA363D2BA83714005BD859 /* ContentView.swift in Sources */,
+				D2AA368E2BA83984005BD859 /* PlanningState.swift in Sources */,
+				D2AA366B2BA837B5005BD859 /* LoginModel.swift in Sources */,
+				D2AA367A2BA8384C005BD859 /* ProfileViewModel.swift in Sources */,
+				D2AA367C2BA83860005BD859 /* UserData.swift in Sources */,
+				D2AA36852BA838FC005BD859 /* InscriptionViewModel.swift in Sources */,
+				D2AA367E2BA83872005BD859 /* UserManager.swift in Sources */,
+				D2AA366F2BA837D5005BD859 /* LoginViewModel.swift in Sources */,
 				D2AA363B2BA83714005BD859 /* AWI_MobileApp.swift in Sources */,
+				D2AA366D2BA837C6005BD859 /* LoginView.swift in Sources */,
+				D2AA36692BA8379F005BD859 /* LoginIntent.swift in Sources */,
+				D2AA36872BA8391E005BD859 /* InscriptionView.swift in Sources */,
+				D2AA368A2BA8395A005BD859 /* PlanningView.swift in Sources */,
+				D2AA36762BA83828005BD859 /* ProfileState.swift in Sources */,
+				D2AA368C2BA83970005BD859 /* PlanningIntent.swift in Sources */,
+				D2AA36812BA838D7005BD859 /* InscriptionIntent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,11 +8,20 @@
 import SwiftUI
 
 struct PlanningView: View {
+    let planning = PlanningViewModel()
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Text("Hello, World!")
+        }
+        .onAppear {
+            planning.getPlanning()
+        }
     }
 }
 
-#Preview {
-    PlanningView()
+struct PlanningView_Previews: PreviewProvider {
+    static var previews: some View {
+        PlanningView()
+    }
 }
+

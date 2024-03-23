@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D20C7B332BAEC34A00B60572 /* Poste.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20C7B322BAEC34A00B60572 /* Poste.swift */; };
+		D20C7B352BAEC44500B60572 /* Employer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20C7B342BAEC44500B60572 /* Employer.swift */; };
+		D20C7B372BAEC4A500B60572 /* Inscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20C7B362BAEC4A500B60572 /* Inscription.swift */; };
 		D214C4B42BA9CABE00BF6D89 /* accueil.swift in Sources */ = {isa = PBXBuildFile; fileRef = D214C4B32BA9CABE00BF6D89 /* accueil.swift */; };
 		D214C4B72BA9CD4F00BF6D89 /* Festival.swift in Sources */ = {isa = PBXBuildFile; fileRef = D214C4B62BA9CD4F00BF6D89 /* Festival.swift */; };
 		D214C4B92BA9D1D700BF6D89 /* FestivalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D214C4B82BA9D1D700BF6D89 /* FestivalView.swift */; };
@@ -55,6 +58,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D20C7B322BAEC34A00B60572 /* Poste.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Poste.swift; sourceTree = "<group>"; };
+		D20C7B342BAEC44500B60572 /* Employer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Employer.swift; sourceTree = "<group>"; };
+		D20C7B362BAEC4A500B60572 /* Inscription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inscription.swift; sourceTree = "<group>"; };
 		D214C4B32BA9CABE00BF6D89 /* accueil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = accueil.swift; sourceTree = "<group>"; };
 		D214C4B62BA9CD4F00BF6D89 /* Festival.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Festival.swift; sourceTree = "<group>"; };
 		D214C4B82BA9D1D700BF6D89 /* FestivalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FestivalView.swift; sourceTree = "<group>"; };
@@ -159,6 +165,9 @@
 				D214C4B32BA9CABE00BF6D89 /* accueil.swift */,
 				D214C4B62BA9CD4F00BF6D89 /* Festival.swift */,
 				D214C4B82BA9D1D700BF6D89 /* FestivalView.swift */,
+				D20C7B322BAEC34A00B60572 /* Poste.swift */,
+				D20C7B342BAEC44500B60572 /* Employer.swift */,
+				D20C7B362BAEC4A500B60572 /* Inscription.swift */,
 			);
 			path = "AWI-Mobile";
 			sourceTree = "<group>";
@@ -379,9 +388,12 @@
 				D2AA363B2BA83714005BD859 /* AWI_MobileApp.swift in Sources */,
 				D214C4B42BA9CABE00BF6D89 /* accueil.swift in Sources */,
 				D2AA366D2BA837C6005BD859 /* LoginView.swift in Sources */,
+				D20C7B332BAEC34A00B60572 /* Poste.swift in Sources */,
+				D20C7B352BAEC44500B60572 /* Employer.swift in Sources */,
 				D2AA36692BA8379F005BD859 /* LoginIntent.swift in Sources */,
 				D2AA36872BA8391E005BD859 /* InscriptionView.swift in Sources */,
 				D2AA368A2BA8395A005BD859 /* PlanningView.swift in Sources */,
+				D20C7B372BAEC4A500B60572 /* Inscription.swift in Sources */,
 				D2AA36762BA83828005BD859 /* ProfileState.swift in Sources */,
 				D2AA368C2BA83970005BD859 /* PlanningIntent.swift in Sources */,
 				D2AA36812BA838D7005BD859 /* InscriptionIntent.swift in Sources */,

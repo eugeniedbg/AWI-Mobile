@@ -12,12 +12,12 @@ class UserManager: ObservableObject {
     private let keyPrefix = "UserManager."
     
     init() {
-        self.isLoggedIn = UserDefaults.standard.bool(forKey: keyPrefix + "isLoggedIn")
-        self.userId = UserDefaults.standard.string(forKey: keyPrefix + "userId") ?? ""
-        self.email = UserDefaults.standard.string(forKey: keyPrefix + "email") ?? ""
-        self.pseudo = UserDefaults.standard.string(forKey: keyPrefix + "pseudo") ?? ""
-        self.role = UserDefaults.standard.string(forKey: keyPrefix + "role") ?? ""
-        self.token = UserDefaults.standard.string(forKey: keyPrefix + "token") ?? ""
+        self.isLoggedIn = UserDefaults.standard.bool(forKey: "isLoggedIn")
+        self.userId = UserDefaults.standard.string(forKey: "userId") ?? ""
+        self.email = UserDefaults.standard.string(forKey:  "email") ?? ""
+        self.pseudo = UserDefaults.standard.string(forKey:  "pseudo") ?? ""
+        self.role = UserDefaults.standard.string(forKey:  "role") ?? ""
+        self.token = UserDefaults.standard.string(forKey:  "token") ?? ""
     }
     
     func login(userId: String, email: String, pseudo: String, role: String, token: String) {
@@ -28,12 +28,12 @@ class UserManager: ObservableObject {
         self.token = token
         self.isLoggedIn = true
         
-        UserDefaults.standard.set(true, forKey: keyPrefix + "isLoggedIn")
-        UserDefaults.standard.set(userId, forKey: keyPrefix + "userId")
-        UserDefaults.standard.set(email, forKey: keyPrefix + "email")
-        UserDefaults.standard.set(pseudo, forKey: keyPrefix + "pseudo")
-        UserDefaults.standard.set(role, forKey: keyPrefix + "role")
-        UserDefaults.standard.set(token, forKey: keyPrefix + "token")
+        UserDefaults.standard.set(true, forKey:  "isLoggedIn")
+        UserDefaults.standard.set(userId, forKey: "userId")
+        UserDefaults.standard.set(email, forKey:  "email")
+        UserDefaults.standard.set(pseudo, forKey:  "pseudo")
+        UserDefaults.standard.set(role, forKey:  "role")
+        UserDefaults.standard.set(token, forKey:  "token")
     }
     
     func logout() {

@@ -6,7 +6,7 @@ struct LoginView: View {
     var body: some View {
         ZStack {            
             if viewModel.isLoggedIn {
-                BlueBackgroundView(viewModel: viewModel, userId: viewModel.userManager.userId, email: viewModel.userManager.email, pseudo: viewModel.userManager.pseudo, role: viewModel.userManager.role)
+                FestivalView()
             } else {
                 ScrollView {
                     VStack {

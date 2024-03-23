@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D214C4B42BA9CABE00BF6D89 /* accueil.swift in Sources */ = {isa = PBXBuildFile; fileRef = D214C4B32BA9CABE00BF6D89 /* accueil.swift */; };
+		D214C4B72BA9CD4F00BF6D89 /* Festival.swift in Sources */ = {isa = PBXBuildFile; fileRef = D214C4B62BA9CD4F00BF6D89 /* Festival.swift */; };
+		D214C4B92BA9D1D700BF6D89 /* FestivalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D214C4B82BA9D1D700BF6D89 /* FestivalView.swift */; };
 		D2AA363B2BA83714005BD859 /* AWI_MobileApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AA363A2BA83714005BD859 /* AWI_MobileApp.swift */; };
 		D2AA363D2BA83714005BD859 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AA363C2BA83714005BD859 /* ContentView.swift */; };
 		D2AA363F2BA83716005BD859 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2AA363E2BA83716005BD859 /* Assets.xcassets */; };
@@ -52,6 +55,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D214C4B32BA9CABE00BF6D89 /* accueil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = accueil.swift; sourceTree = "<group>"; };
+		D214C4B62BA9CD4F00BF6D89 /* Festival.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Festival.swift; sourceTree = "<group>"; };
+		D214C4B82BA9D1D700BF6D89 /* FestivalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FestivalView.swift; sourceTree = "<group>"; };
 		D2AA36372BA83714005BD859 /* AWI-Mobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AWI-Mobile.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2AA363A2BA83714005BD859 /* AWI_MobileApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AWI_MobileApp.swift; sourceTree = "<group>"; };
 		D2AA363C2BA83714005BD859 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -108,6 +114,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D214C4B22BA9CA2100BF6D89 /* asset */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = asset;
+			sourceTree = "<group>";
+		};
 		D2AA362E2BA83714005BD859 = {
 			isa = PBXGroup;
 			children = (
@@ -131,6 +144,7 @@
 		D2AA36392BA83714005BD859 /* AWI-Mobile */ = {
 			isa = PBXGroup;
 			children = (
+				D214C4B22BA9CA2100BF6D89 /* asset */,
 				D2AA36882BA83944005BD859 /* Planning */,
 				D2AA367F2BA8387B005BD859 /* Inscription */,
 				D2AA36702BA837E4005BD859 /* Profile */,
@@ -142,6 +156,9 @@
 				D2AA36412BA83716005BD859 /* Preview Content */,
 				D2AA367B2BA83860005BD859 /* UserData.swift */,
 				D2AA367D2BA83872005BD859 /* UserManager.swift */,
+				D214C4B32BA9CABE00BF6D89 /* accueil.swift */,
+				D214C4B62BA9CD4F00BF6D89 /* Festival.swift */,
+				D214C4B82BA9D1D700BF6D89 /* FestivalView.swift */,
 			);
 			path = "AWI-Mobile";
 			sourceTree = "<group>";
@@ -354,10 +371,13 @@
 				D2AA366B2BA837B5005BD859 /* LoginModel.swift in Sources */,
 				D2AA367A2BA8384C005BD859 /* ProfileViewModel.swift in Sources */,
 				D2AA367C2BA83860005BD859 /* UserData.swift in Sources */,
+				D214C4B92BA9D1D700BF6D89 /* FestivalView.swift in Sources */,
 				D2AA36852BA838FC005BD859 /* InscriptionViewModel.swift in Sources */,
 				D2AA367E2BA83872005BD859 /* UserManager.swift in Sources */,
+				D214C4B72BA9CD4F00BF6D89 /* Festival.swift in Sources */,
 				D2AA366F2BA837D5005BD859 /* LoginViewModel.swift in Sources */,
 				D2AA363B2BA83714005BD859 /* AWI_MobileApp.swift in Sources */,
+				D214C4B42BA9CABE00BF6D89 /* accueil.swift in Sources */,
 				D2AA366D2BA837C6005BD859 /* LoginView.swift in Sources */,
 				D2AA36692BA8379F005BD859 /* LoginIntent.swift in Sources */,
 				D2AA36872BA8391E005BD859 /* InscriptionView.swift in Sources */,

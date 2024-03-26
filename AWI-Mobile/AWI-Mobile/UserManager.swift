@@ -44,11 +44,11 @@ class UserManager: ObservableObject {
         self.role = ""
         self.token = ""
         
-        UserDefaults.standard.set(false, forKey: keyPrefix + "isLoggedIn")
-        UserDefaults.standard.set(nil, forKey: keyPrefix + "userId")
-        UserDefaults.standard.set(nil, forKey: keyPrefix + "email")
-        UserDefaults.standard.set(nil, forKey: keyPrefix + "pseudo")
-        UserDefaults.standard.set(nil, forKey: keyPrefix + "role")
-        UserDefaults.standard.set(nil, forKey: keyPrefix + "token")
+        UserDefaults.standard.set(false, forKey:   "isLoggedIn")
+        UserDefaults.standard.set(nil, forKey:  "userId")
+        UserDefaults.standard.set(nil, forKey:  "email")
+        UserDefaults.standard.set(nil, forKey:  "pseudo")
+        UserDefaults.standard.set(nil, forKey:  "role")
+        UserDefaults.standard.set(nil, forKey:  "token")
     }
 }

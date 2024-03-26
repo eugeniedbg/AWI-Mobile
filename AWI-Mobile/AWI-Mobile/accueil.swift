@@ -41,7 +41,7 @@ struct AccueilView: View {
                         Image(systemName: Tab.home.image)
                         Text(Tab.home.title)
                     }
-                PlanningView()
+                PlanningView(viewModel: PlanningViewModel())
                     .tag(Tab.inscription)
                     .tabItem {
                         Image(systemName: Tab.inscription.image)

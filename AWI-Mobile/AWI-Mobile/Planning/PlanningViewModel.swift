@@ -6,14 +6,21 @@
 //
 
 import Foundation
+import SwiftUI
 
 class PlanningViewModel: ObservableObject{
     @Published var state = PlanningState()
+    @Published public var festival: Festival? = nil
+    private var planningIntent : PlanningIntent?
+    public var ready = false
+    
+    struct LegendItem {
+        let name: String
+        let color: Color
+    }
     
     
-    
-    
-    public func getInscription(){
+    private func getInscription(){
         let idbenevole = UserDefaults.standard.integer(forKey: "userId")
         print("idbenevole : \(idbenevole)")
         guard let url = URL(string: "https://awi-api-2.onrender.com/inscription-module/volunteer/\(idbenevole)")else
@@ -46,7 +53,10 @@ class PlanningViewModel: ObservableObject{
                             self.state.inscription.append(item)
                         }
                     }
-                    print("isncription : \(self.state.inscription)")
+                    self.festival = self.state.festival
+                    print("inscription : \(self.state.inscription)")
+                    debugPrint("festival=\(self.festival?.nomFestival)")
+                    
                 }
             }
             catch{
@@ -57,7 +67,7 @@ class PlanningViewModel: ObservableObject{
         task.resume()
     }
     
-    public func getPostes() {
+    private func getPostes() {
         guard let url = URL(string: "https://awi-api-2.onrender.com/position-module") else {
             print("Problème URL")
             return
@@ -99,8 +109,8 @@ class PlanningViewModel: ObservableObject{
         task.resume()
     }
     
-    public func getEmployers() {
-        /*let festivale = UserDefaults.standard.integer(forKey: "festivalID")
+    private func getEmployers() {
+        let festivale = UserDefaults.standard.integer(forKey: "festivalID")
 
             // Initialisation de self.state.festival
             let festivalUrl = URL(string: "https://awi-api-2.onrender.com/festival-module/\(festivale)")!
@@ -129,12 +139,7 @@ class PlanningViewModel: ObservableObject{
                     print("Error decoding: \(error)")
                 }
             }
-            festivalTask.resume()*/
-
-        
-        
-        
-
+            festivalTask.resume()
         
         guard let url = URL(string: "https://awi-api-2.onrender.com/employer-module/festival/\(UserDefaults.standard.integer(forKey: "festivalID"))") else {
             print("Problème URL")
@@ -179,12 +184,42 @@ class PlanningViewModel: ObservableObject{
         task.resume()
     }
     
-    public func getPlanning(){
-        self.getEmployers()
-        self.getPostes()
-        self.getInscription()
+    func send(intent: PlanningIntent){
+        self.planningIntent = intent
+        
+        switch intent{
+        case .getFestivalData:
+            getEmployers()
+        }
     }
 
+    public func getColorForCreneau(jour: String, creneau: String) -> Color {
+            // Récupérer les inscriptions pour le jour et le créneau donnés
+        let inscriptionsForCreneau = state.inscription.filter { $0.Jour == jour && $0.Creneau == creneau }
 
+
+            // Récupérer les noms de poste des inscriptions trouvées
+            let postesForCreneau = inscriptionsForCreneau.compactMap { inscription in
+                state.poste.first { $0.idPoste == inscription.idPoste }?.nomPoste
+            }
+
+            // Créer une légende avec les noms de poste et leurs couleurs correspondantes
+            let legend: [LegendItem] = [
+                LegendItem(name: "Accueil", color: Color(red: 0.235, green: 0.796, blue: 0.957)),
+                LegendItem(name: "Buvette", color: Color(red: 0.067, green: 0.498, blue: 0.271)),
+                LegendItem(name: "Animation Jeux", color: Color(red: 0.063, green: 0.361, blue: 0.624)),
+                LegendItem(name: "Cuisine", color: Color(red: 0.2, green: 0.769, blue: 0.506))
+            ]
+
+            // Trouver la couleur correspondante au nom de poste trouvé dans les inscriptions
+            for poste in postesForCreneau {
+                if let legendItem = legend.first(where: { $0.name == poste }) {
+                    return legendItem.color
+                }
+            }
+
+            // Retourner une couleur par défaut si aucun nom de poste ne correspond
+            return Color.white
+        }
     
 }

@@ -12,7 +12,6 @@ class PlanningViewModel: ObservableObject{
     @Published var state = PlanningState()
     @Published public var festival: Festival? = nil
     private var planningIntent : PlanningIntent?
-    public var ready = false
     
     struct LegendItem {
         let name: String

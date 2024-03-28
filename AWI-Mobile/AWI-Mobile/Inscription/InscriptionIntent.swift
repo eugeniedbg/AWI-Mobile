@@ -8,5 +8,6 @@
 import Foundation
 
 enum InscriptionIntent{
-    case inscriptionFestivale
+    case fetchDataInscription
+    case sinscrire
 }

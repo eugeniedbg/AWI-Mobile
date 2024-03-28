@@ -67,7 +67,8 @@ struct PlanningView: View {
                 LegendItem(name: "Accueil", color: Color(red: 0.235, green: 0.796, blue: 0.957)),
                 LegendItem(name: "Buvette", color: Color(red: 0.067, green: 0.498, blue: 0.271)),
                 LegendItem(name: "Animation Jeux", color: Color(red: 0.063, green: 0.361, blue: 0.624)),
-                LegendItem(name: "Cuisine", color: Color(red: 0.2, green: 0.769, blue: 0.506))
+                LegendItem(name: "Cuisine", color: Color(red: 0.2, green: 0.769, blue: 0.506)),
+                LegendItem(name: "Flexible", color: Color(red: 0.9921568627450981, green: 0.30980392156862746, blue: 0.30980392156862746))
                 ]
     
 
@@ -125,10 +126,10 @@ struct PlanningView: View {
                             Rectangle()
                                 .fill(item.color)
                             Text(item.name)
-                                .font(.headline)
+                                .font(.subheadline)
                                 .foregroundColor(.white)
                         }
-                        .frame(width: UIScreen.main.bounds.width/4 - 10 , height: 90)
+                        .frame(width: UIScreen.main.bounds.width/5 - 10 , height: 90)
                         .cornerRadius(10)
                     }
             }

@@ -35,20 +35,20 @@ struct AccueilView: View {
 
         var body: some View {
             TabView(selection: $selectedTab) {
-                FestivalView()
+                PlanningView(viewModel: PlanningViewModel())                
                     .tag(Tab.home)
                     .tabItem {
                         Image(systemName: Tab.home.image)
                         Text(Tab.home.title)
                     }
-                PlanningView(viewModel: PlanningViewModel())
+                InscriptionView(viewModel: InscriptionViewModel())
                     .tag(Tab.inscription)
                     .tabItem {
                         Image(systemName: Tab.inscription.image)
                         Text(Tab.inscription.title)
                     }
 
-                InscriptionView()
+                ProfileView()
                     .tag(Tab.profil)
                     .tabItem {
                         Image(systemName: Tab.profil.image)

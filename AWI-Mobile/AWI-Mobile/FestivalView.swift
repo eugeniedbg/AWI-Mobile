@@ -20,6 +20,11 @@ struct FestivalView: View {
                 List(festivals) { festival in
                                     FestivalRow(festival: festival, onTap: { festivalID in
                                         self.selectedFestivalID = festivalID
+                                        UserDefaults.standard.set(festival.dateDebut, forKey: "dateDebut")
+                                        print(festival.dateDebut)
+                                        UserDefaults.standard.set(festival.dateFin, forKey: "dateFin")
+                                        UserDefaults.standard.set(festivalID, forKey: "festivalID")
+                                        print("festivale id in view : \(UserDefaults.standard.integer(forKey: "festivalID"))")
                                     })
                                 }
                 .navigationTitle("Festivals")

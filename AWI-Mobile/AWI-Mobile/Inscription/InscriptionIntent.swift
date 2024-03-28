@@ -6,3 +6,8 @@
 //
 
 import Foundation
+
+enum InscriptionIntent{
+    case fetchDataInscription
+    case sinscrire
+}

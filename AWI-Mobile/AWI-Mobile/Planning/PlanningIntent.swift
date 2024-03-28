@@ -6,3 +6,7 @@
 //
 
 import Foundation
+
+enum PlanningIntent{
+    case getFestivalData
+}

@@ -10,7 +10,7 @@ import SwiftUI
 import Foundation
 
 struct Festival: Identifiable, Decodable {
-    let id: Int
+    var id: Int
     let nomFestival: String
     let dateDebut: Date
     let dateFin: Date

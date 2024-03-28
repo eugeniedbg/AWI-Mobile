@@ -11,6 +11,8 @@ import SwiftUI
 struct AWI_MobileApp: App {
     var body: some Scene {
         WindowGroup {
+            
+            //FestivalView()
             ContentView()
         }
     }

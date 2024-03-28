@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D20C7B332BAEC34A00B60572 /* Poste.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20C7B322BAEC34A00B60572 /* Poste.swift */; };
+		D20C7B352BAEC44500B60572 /* Employer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20C7B342BAEC44500B60572 /* Employer.swift */; };
+		D20C7B372BAEC4A500B60572 /* Inscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20C7B362BAEC4A500B60572 /* Inscription.swift */; };
 		D214C4B42BA9CABE00BF6D89 /* accueil.swift in Sources */ = {isa = PBXBuildFile; fileRef = D214C4B32BA9CABE00BF6D89 /* accueil.swift */; };
 		D214C4B72BA9CD4F00BF6D89 /* Festival.swift in Sources */ = {isa = PBXBuildFile; fileRef = D214C4B62BA9CD4F00BF6D89 /* Festival.swift */; };
 		D214C4B92BA9D1D700BF6D89 /* FestivalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D214C4B82BA9D1D700BF6D89 /* FestivalView.swift */; };
@@ -35,6 +38,7 @@
 		D2AA368C2BA83970005BD859 /* PlanningIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AA368B2BA83970005BD859 /* PlanningIntent.swift */; };
 		D2AA368E2BA83984005BD859 /* PlanningState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AA368D2BA83984005BD859 /* PlanningState.swift */; };
 		D2AA36902BA8399A005BD859 /* PlanningViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AA368F2BA8399A005BD859 /* PlanningViewModel.swift */; };
+		D2B9E68B2BB58AC9007C1EBA /* logo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D2B9E68A2BB58AC8007C1EBA /* logo.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +59,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D20C7B322BAEC34A00B60572 /* Poste.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Poste.swift; sourceTree = "<group>"; };
+		D20C7B342BAEC44500B60572 /* Employer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Employer.swift; sourceTree = "<group>"; };
+		D20C7B362BAEC4A500B60572 /* Inscription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inscription.swift; sourceTree = "<group>"; };
 		D214C4B32BA9CABE00BF6D89 /* accueil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = accueil.swift; sourceTree = "<group>"; };
 		D214C4B62BA9CD4F00BF6D89 /* Festival.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Festival.swift; sourceTree = "<group>"; };
 		D214C4B82BA9D1D700BF6D89 /* FestivalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FestivalView.swift; sourceTree = "<group>"; };
@@ -87,6 +94,7 @@
 		D2AA368B2BA83970005BD859 /* PlanningIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanningIntent.swift; sourceTree = "<group>"; };
 		D2AA368D2BA83984005BD859 /* PlanningState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanningState.swift; sourceTree = "<group>"; };
 		D2AA368F2BA8399A005BD859 /* PlanningViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanningViewModel.swift; sourceTree = "<group>"; };
+		D2B9E68A2BB58AC8007C1EBA /* logo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = logo.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +125,7 @@
 		D214C4B22BA9CA2100BF6D89 /* asset */ = {
 			isa = PBXGroup;
 			children = (
+				D2B9E68A2BB58AC8007C1EBA /* logo.jpg */,
 			);
 			path = asset;
 			sourceTree = "<group>";
@@ -159,6 +168,9 @@
 				D214C4B32BA9CABE00BF6D89 /* accueil.swift */,
 				D214C4B62BA9CD4F00BF6D89 /* Festival.swift */,
 				D214C4B82BA9D1D700BF6D89 /* FestivalView.swift */,
+				D20C7B322BAEC34A00B60572 /* Poste.swift */,
+				D20C7B342BAEC44500B60572 /* Employer.swift */,
+				D20C7B362BAEC4A500B60572 /* Inscription.swift */,
 			);
 			path = "AWI-Mobile";
 			sourceTree = "<group>";
@@ -337,6 +349,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D2AA36432BA83716005BD859 /* Preview Assets.xcassets in Resources */,
+				D2B9E68B2BB58AC9007C1EBA /* logo.jpg in Resources */,
 				D2AA363F2BA83716005BD859 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -379,9 +392,12 @@
 				D2AA363B2BA83714005BD859 /* AWI_MobileApp.swift in Sources */,
 				D214C4B42BA9CABE00BF6D89 /* accueil.swift in Sources */,
 				D2AA366D2BA837C6005BD859 /* LoginView.swift in Sources */,
+				D20C7B332BAEC34A00B60572 /* Poste.swift in Sources */,
+				D20C7B352BAEC44500B60572 /* Employer.swift in Sources */,
 				D2AA36692BA8379F005BD859 /* LoginIntent.swift in Sources */,
 				D2AA36872BA8391E005BD859 /* InscriptionView.swift in Sources */,
 				D2AA368A2BA8395A005BD859 /* PlanningView.swift in Sources */,
+				D20C7B372BAEC4A500B60572 /* Inscription.swift in Sources */,
 				D2AA36762BA83828005BD859 /* ProfileState.swift in Sources */,
 				D2AA368C2BA83970005BD859 /* PlanningIntent.swift in Sources */,
 				D2AA36812BA838D7005BD859 /* InscriptionIntent.swift in Sources */,

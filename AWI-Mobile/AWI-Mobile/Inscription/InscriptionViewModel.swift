@@ -436,7 +436,59 @@ class InscriptionViewModel: ObservableObject{
     }
 
 
+    public func sinscrireflexible(postes: [Poste]) {
+        for poste in postes {
+            guard let idBenevole = UserDefaults.standard.integer(forKey: "userId") as? Int
+            else {
+                print("Erreur : ID manquant")
+                return
+            }
+
+            let body: [String: Any?] = [
+                "idBenevole": idBenevole,
+                "idZoneBenevole": nil,
+                "idPoste": poste.idPoste,
+                "Creneau": self.state.Creneau,
+                "Jour": self.state.Jour,
+                "isPresent": false
+            ]
+
+            guard let url = URL(string: "https://awi-api-2.onrender.com/inscription-module") else {
+                print("Invalid URL")
+                return
+            }
+
+            var request = URLRequest(url: url)
+            request.httpMethod = "POST"
+            request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+            request.httpBody = try? JSONSerialization.data(withJSONObject: body)
+
+            let task = URLSession.shared.dataTask(with: request) { (response, request, error) in
+                if let error = error {
+                    print("Error: \(error)")
+                    return
+                }
+
+                guard let response = response as? HTTPURLResponse,
+                      response.statusCode == 201 else {
+                    print("Error: Invalid response")
+                    return
+                }
+
+                DispatchQueue.main.async {
+                    // Mettre à jour l'état de la vue si nécessaire
+                    print("Inscription réussie pour le poste \(poste.nomPoste)")
+                }
+            }
+            task.resume()
+        }
+    }
+
     
+    
+        
+
+        
     
     
 }

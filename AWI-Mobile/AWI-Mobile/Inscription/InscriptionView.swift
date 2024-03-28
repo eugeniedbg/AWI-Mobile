@@ -14,6 +14,8 @@ struct InscriptionView: View {
     @State private var selectedPost: Poste?
     @State private var showPopup = false
     @State private var showFlexibleFrame = false
+    @State private var showPlanning = false
+
 
     
     
@@ -134,18 +136,17 @@ struct InscriptionView: View {
             .padding()
             
             Button(action: {
-                // Appeler la fonction sinscrireflexible avec les postes sélectionnés
-                //self.sinscrireflexible()
+                self.showPlanning.toggle()
             }) {
-                Text("S'inscrire")
-                    .font(.headline)
-                    .foregroundColor(.white)
-                    .padding()
-                    .frame(maxWidth: .infinity)
-                    .background(Color.blue)
-                    .cornerRadius(10)
+                Text("Afficher le planning")
+                // ...
             }
             .padding()
+            
+            .sheet(isPresented: $showPlanning) {
+                // Contenu de la frame pour les bénévoles flexibles
+                Planning()
+            }
         }
     }
     
@@ -216,4 +217,51 @@ struct InscriptionView: View {
             .frame(width: 300, height: 150)
         }
     }
+    
+    private func Planning() -> some View {
+        ScrollView {
+            VStack(alignment: .leading) {
+                ForEach(viewModel.jours, id: \.self) { jour in
+                    Text(jour)
+                        .font(.headline)
+                        .padding(.vertical, 5)
+                    
+                    ForEach(viewModel.creneaux, id: \.self) { creneau in
+                        Button(action: {
+                            // Appeler sinscrireflexible avec le jour et le créneau sélectionnés
+                            self.viewModel.state.Creneau = creneau
+                            self.viewModel.state.Jour = jour
+                            self.viewModel.sinscrireflexible(postes: self.selectedPostsFlexible)
+                            self.showFlexibleFrame = false
+                            self.showPlanning = false
+                            self.showPopup = true
+                            
+                        }) {
+                            Text(creneau)
+                                .font(.subheadline)
+                                .foregroundColor(.white)
+                                .padding()
+                                .frame(maxWidth: .infinity)
+                                .background(Color.blue)
+                                .cornerRadius(10)
+                        }
+                    }
+                }
+            }
+            .padding()
+        }
+        .sheet(isPresented: $showPopup) {
+            // Contenu de la popup
+            VStack {
+                Text("Votre inscription a bien été prise en compte.")
+                    .font(.headline)
+                Button("OK") {
+                    self.showPopup = false
+                }
+            }
+            .padding()
+            .frame(width: 300, height: 150)
+        }
+    }
+
 }

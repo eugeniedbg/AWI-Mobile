@@ -15,6 +15,7 @@ struct InscriptionView: View {
     @State private var showPopup = false
     @State private var showFlexibleFrame = false
     @State private var showPlanning = false
+    @State private var showingErrorAlert = false
 
 
     
@@ -89,7 +90,7 @@ struct InscriptionView: View {
     }
     
     private func listAllPosts() -> some View {
-        print("Postes [] \(viewModel.poste)")
+        //print("Postes [] \(viewModel.poste)")
         return VStack {
             ForEach(viewModel.poste ?? [], id: \.id) { post in
                 postButton(for: post)
@@ -175,8 +176,11 @@ struct InscriptionView: View {
                                     self.viewModel.state.idPoste = idPost
                                     self.viewModel.state.idZoneBenevole = idPost
                                     self.viewModel.state.Jour = day
-                                    self.viewModel.sinscrire()
-                                    self.showPopup = true
+                                    self.showingErrorAlert = self.viewModel.checkInscription()
+                                    if(!showingErrorAlert){
+                                        self.viewModel.sinscrire()
+                                        self.showPopup = true
+                                    }
                                 }) {
                                     HStack {
                                         Text(creneau)
@@ -211,10 +215,14 @@ struct InscriptionView: View {
                     .font(.headline)
                 Button("OK") {
                     self.showPopup = false
+                    self.selectedPost = nil
                 }
             }
             .padding()
             .frame(width: 300, height: 150)
+        }
+        .alert(isPresented: $showingErrorAlert) {
+            Alert(title: Text("Erreur"), message: Text("Vous êtes déjà inscrit sur ce créneau"), dismissButton: .default(Text("OK")))
         }
     }
     
@@ -231,6 +239,7 @@ struct InscriptionView: View {
                             // Appeler sinscrireflexible avec le jour et le créneau sélectionnés
                             self.viewModel.state.Creneau = creneau
                             self.viewModel.state.Jour = jour
+                            self.showingErrorAlert = self.viewModel.checkInscription()
                             self.viewModel.sinscrireflexible(postes: self.selectedPostsFlexible)
                             self.showFlexibleFrame = false
                             self.showPlanning = false
@@ -261,7 +270,12 @@ struct InscriptionView: View {
             }
             .padding()
             .frame(width: 300, height: 150)
+            .alert(isPresented: $showingErrorAlert) {
+                Alert(title: Text("Erreur"), message: Text("Vous êtes déjà inscrit sur ce créneau"), dismissButton: .default(Text("OK")))
+            }
+
         }
     }
+    
 
 }

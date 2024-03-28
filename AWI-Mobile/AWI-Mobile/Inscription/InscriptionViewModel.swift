@@ -258,9 +258,9 @@ class InscriptionViewModel: ObservableObject{
     public func getAllInscriptionByIdpost(idPostes: Int) -> [String: [(String, Int, Int)]] {
         var inscriptionDict: [String: [(String, Int, Int)]] = [:]
         
-        let dateFormatter = DateFormatter()
+        /*let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
-        dateFormatter.locale = Locale(identifier: "en_US_POSIX")
+        dateFormatter.locale = Locale(identifier: "en_US_POSIX")*/
         
         // Regrouper les inscriptions par jour et par idPoste
         let inscriptionsByDay = Dictionary(grouping: self.inscription?.filter({ $0.idPoste == idPostes }) ?? [], by: { $0.Jour })
@@ -483,13 +483,35 @@ class InscriptionViewModel: ObservableObject{
             task.resume()
         }
     }
-
     
-    
-        
-
-        
-    
+    public func checkInscription() -> Bool {
+        guard let idBenevole = UserDefaults.standard.integer(forKey: "userId") as? Int,
+              let jourString = self.state.Jour,
+              let creneau = self.state.Creneau else {
+            print("Erreur : ID bénévole, jour ou créneau manquant")
+            return false
+        }
+        if let inscriptions = self.inscription {
+            for inscription in inscriptions {
+                let dateFormatter = DateFormatter()
+                dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+                dateFormatter.locale = Locale(identifier: "en_US_POSIX")
+                
+                if let inscriptionDate = dateFormatter.date(from: inscription.Jour){
+                    dateFormatter.dateFormat = "dd MMM"
+                    let inscriptionFormattedDate = dateFormatter.string(from: inscriptionDate)
+                    
+                    if inscription.idBenevole == idBenevole && inscriptionFormattedDate == jourString && inscription.Creneau == creneau {
+                        print("Le bénévole est déjà inscrit à ce créneau et ce jour")
+                        return true
+                    }
+                }
+            }
+        }
+        print("Le bénévole n'est pas inscrit à ce créneau et ce jour")
+        return false
+    }
     
 }
+
 

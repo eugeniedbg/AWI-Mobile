@@ -77,56 +77,65 @@ struct PlanningView: View {
         var days = Array(Set(result.map { $0.0 })) // récupère les jours uniques
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd MMM"
-
+        
         days = days.sorted {
             dateFormatter.date(from: $0)! < dateFormatter.date(from: $1)!
         }
         print("days\(days)")
         
-            //if let poste = postes.first(where: { $0.id == inscription.idPoste }) {
+        //if let poste = postes.first(where: { $0.id == inscription.idPoste }) {
         
         
         
         let creneaux = ["09-11", "11-14", "14-17", "17-20", "20-22"]
         
         return
-        VStack{
-            LazyHGrid(rows: [GridItem(.adaptive(minimum: 100))], spacing: 5) {
-                HStack(alignment: .center, spacing: 5) {
-                    ForEach(days, id: \.self) { day in
-                        VStack(alignment: .center, spacing: 5){
-                            Text(day)
-                                .font(.title3)
-                                .fontWeight(.bold)
-                                .padding(10)
-                                .background(Color.blue.opacity(0.2))
-                                .cornerRadius(10)
-                                .frame(width: 400)
-                            ForEach(creneaux, id: \.self) { creneau in
-                                let timeSlot = "\(creneau)h"
-                                if let postName = result.first(where: { $0.0 == day && $0.1 == timeSlot })?.2 {
-                                    let legendItem = legend.first(where: { $0.name == postName })
-                                    crenau(horaire: timeSlot, couleur: legendItem?.color ?? .gray)
-                                } else {
-                                    crenau(horaire: timeSlot, couleur: .white)
+       
+            VStack{
+                ScrollView(.horizontal){
+                LazyHGrid(rows: [GridItem(.adaptive(minimum: 100))], spacing: 5) {
+                    
+                        HStack(alignment: .center, spacing: 5) {
+                            ForEach(days, id: \.self) { day in
+                                VStack(alignment: .center, spacing: 5){
+                                    Text(day)
+                                        .font(.title3)
+                                        .fontWeight(.bold)
+                                        .padding(10)
+                                        .background(Color.blue.opacity(0.2))
+                                        .cornerRadius(10)
+                                        .frame(width: 400)
+                                    ForEach(creneaux, id: \.self) { creneau in
+                                        let timeSlot = "\(creneau)h"
+                                        if let postName = result.first(where: { $0.0 == day && $0.1 == timeSlot })?.2 {
+                                            let legendItem = legend.first(where: { $0.name == postName })
+                                            crenau(horaire: timeSlot, couleur: legendItem?.color ?? .gray)
+                                        } else {
+                                            crenau(horaire: timeSlot, couleur: .white)
+                                        }
+                                    }
                                 }
+                                //.frame(maxWidth: UIScreen.main.bounds.width / CGFloat(days.count)-30)
+                                .frame(width: (UIScreen.main.bounds.width / 3) - 30)
+                                
                             }
+                            .padding(.horizontal)
                         }
-                        .frame(maxWidth: UIScreen.main.bounds.width / CGFloat(days.count)-20)
-                        
+                        //.padding(.leading,10)
                     }
-                    .padding(.horizontal)
+                .padding(.top, 100)
                 }
-            }
-            .padding(.top, 20)
-            
+                .frame( minHeight: 350)
+                
+                //.padding(.top, 20)
+                
                 HStack(alignment: .center){
                     ForEach(legend, id: \.name) { item in
                         ZStack {
                             Rectangle()
                                 .fill(item.color)
                             Text(item.name)
-                                .font(.subheadline)
+                                .font(.caption)
                                 .foregroundColor(.white)
                         }
                         .frame(width: UIScreen.main.bounds.width/5 - 10 , height: 90)
@@ -159,7 +168,7 @@ struct PlanningView: View {
                 }
                 let day = "\(formattedDate)"
                 let timeSlot = "\(inscription.Creneau)h"
-                let postName = poste.nomPoste
+                let postName = inscription.idZoneBenevole != nil ? (poste.nomPoste) : "Flexible"
                 result.append((day, timeSlot, postName))
             }
         }

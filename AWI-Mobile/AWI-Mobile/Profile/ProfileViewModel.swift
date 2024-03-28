@@ -13,6 +13,7 @@ class ProfileViewModel: ObservableObject {
     @Published public var profile: Profile? = nil
     private var profileIntent: ProfileIntent?
     private var idBenevole = UserDefaults.standard.integer(forKey: "userId")
+    
 
     func send(intent: ProfileIntent) {
         self.profileIntent = intent
@@ -21,7 +22,7 @@ class ProfileViewModel: ObservableObject {
         case .fetchDataProfil:
             getDataProfil()
         case .putDataProfil:
-            getDataProfil()
+            putDataProfil()
         }
     }
 
@@ -55,6 +56,10 @@ class ProfileViewModel: ObservableObject {
             }
         }
         task.resume()
+        
+    }
+    
+    private func putDataProfil(){
         
     }
 }

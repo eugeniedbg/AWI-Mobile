@@ -10,12 +10,13 @@ struct LoginView: View {
             } else {
                 ScrollView {
                     VStack {
-                        Image("logo")
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .padding(.top, 10)
-                        
-                        
+                        if let image = UIImage(named: "logo.jpg") {
+                                        Image(uiImage: image)
+                                            .resizable()
+                                            .aspectRatio(contentMode: .fit)
+                                            .frame(width: 200, height: 200)
+                                    }
+                    
                         Text(viewModel.isRegistering ? "Register" : "Login")
                             .font(.largeTitle)
                             .padding()

@@ -48,7 +48,7 @@ struct AccueilView: View {
                         Text(Tab.inscription.title)
                     }
 
-                ProfileView()
+                ProfileView(viewModel: ProfileViewModel())
                     .tag(Tab.profil)
                     .tabItem {
                         Image(systemName: Tab.profil.image)

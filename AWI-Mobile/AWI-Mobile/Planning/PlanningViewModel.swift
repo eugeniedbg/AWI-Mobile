@@ -10,6 +10,7 @@ import SwiftUI
 
 class PlanningViewModel: ObservableObject{
     @Published var state = PlanningState()
+    @Published var profile: Profile? = nil
     @Published public var festival: Festival? = nil
     private var planningIntent : PlanningIntent?
     

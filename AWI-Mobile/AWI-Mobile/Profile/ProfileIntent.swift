@@ -6,3 +6,7 @@
 //
 
 import Foundation
+enum ProfileIntent{
+    case fetchDataProfil
+    case putDataProfil
+}

@@ -16,10 +16,6 @@ struct InscriptionView: View {
     @State private var showFlexibleFrame = false
     @State private var showPlanning = false
     @State private var showingErrorAlert = false
-
-
-    
-    
     
     var body: some View {
         VStack {
@@ -137,7 +133,12 @@ struct InscriptionView: View {
             .padding()
             
             Button(action: {
-                self.showPlanning.toggle()
+                if(!self.selectedPostsFlexible.isEmpty){
+                    self.showPlanning.toggle()
+                }
+                else{
+                    self.showingErrorAlert = true
+                }
             }) {
                 Text("Afficher le planning")
                 // ...
@@ -147,6 +148,9 @@ struct InscriptionView: View {
             .sheet(isPresented: $showPlanning) {
                 // Contenu de la frame pour les bénévoles flexibles
                 Planning()
+            }
+            .alert(isPresented: $showingErrorAlert) {
+                Alert(title: Text("Erreur"), message: Text("veuillez selectionner un créneau "), dismissButton: .default(Text("OK")))
             }
         }
     }
